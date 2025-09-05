@@ -19,3 +19,16 @@ function agregarAmigo() {
     actualizarLista();
 }
 
+//función para mostrar/actualizar lista
+function actualizarLista() {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+
+    //recorro el array y agrego elementos a la lista
+    for (let i = 0; i < listaDeAmigosIngresados.length; i++) {
+        let ultimoNombreAgregado = listaDeAmigosIngresados[i];
+        let agregarLista = document.createElement('li');
+        agregarLista.textContent = ultimoNombreAgregado;
+        lista.appendChild(agregarLista);
+    }
+}
